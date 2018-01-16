@@ -1,0 +1,36 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
+
+sudo apt-get update
+sudo apt-get install default-jdk
+java -version
+
+To Manage multiple version on Java in one server
+sudo update-alternatives --config java
+
+Edit the file to set Environment variable
+vim /etc/environment
+
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+
+MAVEN CONFIGURATION:  https://www.vultr.com/docs/how-to-install-apache-maven-on-ubuntu-16-04
+
+1.apt-get update -y
+2.cd /opt/
+3.wget http://www-eu.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+4.tar -xvzf apache-maven-3.5.2-bin.tar.gz
+5.mv apache-maven-3.5.2 maven 
+6.Setup environment variables
+	vim /etc/profile.d/mavenenv.sh
+7.Add the following lines:
+
+export M2_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+
+8.sudo chmod +x /etc/profile.d/mavenenv.sh
+  sudo source /etc/profile.d/mavenenv.sh
+
+9.Verify installation: mvn --version
+
+
+
+

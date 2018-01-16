@@ -1,0 +1,31 @@
+https://guides.github.com/introduction/flow/
+https://help.github.com/articles/what-are-the-differences-between-subversion-and-git/
+https://www.git-tower.com/blog/git-cheat-sheet/
+https://stackoverflow.com/questions/33667782/fatal-error-cant-resolve-host-github-com
+https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html
+https://en.wikipedia.org/wiki/Apache_Maven
+
+Git Installation for Linux:
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+
+Steps to Follow:
+1. Download lastest version of Ecipse (Oxygen)
+
+2.Create a Maven project in Eclipse
+
+3.Create a package eg: com.nrm.practise under src/main/java same in test folder as well.
+
+4 Using Maven in eclipse, run pom.xml file as maven build,clean or compile as goals.
+
+5.Create repo in github without adding README.md
+
+6.Follow the steps in above github on your local using commands in git sheet.( git init, git commit, git status, git push, git remote...)
+
+7.Make a change in code locally, check for git status and do commit , push as above.
+
+8.Before pushing to github remote repo config as below.
+ 
+  git config --global user.name njsingh15
+   
+  git config --global user.email njsingh15@gmail.com
