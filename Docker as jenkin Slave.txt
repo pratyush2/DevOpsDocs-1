@@ -1,0 +1,29 @@
+
+Follow the below steps to configure Docker Remote API to set URL:
+
+Ubuntu:16.0.4
+
+1.vim /lib/systemd/system/docker.service
+2.Under this file search for ExecStart and fill as below:
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock
+3.Make sure the Docker service notices the modified configuration:
+  systemctl daemon-reload
+4.Restart the Docker service:
+  service docker restart
+5.Test that the Docker API is indeed accessible:
+   curl http://Prive-IPAddress-of-AWS:4243/version
+6.You should see output similar to this as the result:
+  {"Version":"17.06.2-ce","ApiVersion":"1.30","MinAPIVersion":"1.12","GitCommit":"cec0b72","GoVersion":"go1.8.3","Os":"linux","Arch":"amd64","KernelVersion":"4.4.0-1035-aws","BuildTime":"2017-09-05T19:59:11.118087934+00:00"}
+7.Test using curl
+   Note: replace the IP with your Docker host IP
+	curl -X GET http://Prive-IPAddress-of-AWS:4243/images/json
+
+
+Reference URLs:
+https://www.ivankrizsan.se/2016/05/18/enabling-docker-remote-api-on-ubuntu-16-04/
+http://scriptcrunch.com/enable-docker-remote-api/
+https://engineering.riotgames.com/news/jenkins-ephemeral-docker-tutorial
+https://devopscube.com/docker-containers-as-build-slaves-jenkins/
+https://wiki.jenkins.io/display/JENKINS/Docker+Plugin
+
+

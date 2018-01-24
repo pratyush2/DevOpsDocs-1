@@ -1,0 +1,2 @@
+https://www.cloudbees.com/blog/get-started-jenkins-20-docker
+https://www.katacoda.com/courses/jenkins/build-docker-images
