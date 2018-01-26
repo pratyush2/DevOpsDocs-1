@@ -1,0 +1,3 @@
+http://www.bogotobogo.com/DevOps/Jenkins/Jenkins_on_EC2_1_setting_up_instance.php
+http://www.360logica.com/blog/email-notification-in-jenkins/
+https://www.arclab.com/en/kb/email/how-to-enable-imap-pop3-smtp-gmail-account.html
