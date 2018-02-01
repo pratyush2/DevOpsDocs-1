@@ -1,29 +1,10 @@
-#!/bin/bash
+1. Create a file as : vim install_jenkins.sh
+2. copy the steps to install Docker and Jenkins image pull as in the link below:
+   https://github.com/manee2k6/jenkins-course/blob/master/scripts/install_jenkins.sh
+3.Open AWS console and configure -->Security groups--> Inbound--> custom TCP --8080 & 50000 port anywhere to be configured.
+4.Go to Putty fire a command as : chmod +x  install_jenkins.sh
+5.Next fire a command as : bash install_jenkins.sh
+6.Post installation you will get the ipaddress with port configured successfully. hit the URL.
+7.Cat <secret key path>
+8.copy paste the key in Jenkins.
 
-# this script is only tested on ubuntu xenial
-
-# install docker
-apt-get update
-apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-apt-key fingerprint 0EBFCD88
-add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-apt-get update
-apt-get install docker-ce
-usermod -aG docker ubuntu
-
-# run jenkins
-mkdir -p /var/jenkins_home
-chown -R 1000:1000 /var/jenkins_home/
-docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -d --name jenkins jenkins
-
-# show endpoint
-echo 'Jenkins installed'
-echo 'You should now be able to access jenkins at: http://'$(curl -s ifconfig.co)':8080'
