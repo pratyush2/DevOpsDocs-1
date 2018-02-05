@@ -8,3 +8,24 @@
 7.Cat <secret key path>
 8.copy paste the key in Jenkins.
 
+Post the above setup stop the docker container: docker stop jenkins
+9.  git clone https://github.com/manee2k6/jenkins-docker.git
+10.cd jenkins-docker
+11.ls and build docker image: docker build -t jenkins-docker .
+12.docker ps and stop the running old container: docker stop jenkins
+13.Remove images: docker rmi -f jenkins.
+14.Run the new container:
+docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker
+15.docker ps
+16. ls -ahl /var/run/docker.sock
+17 execute inside the running container: docker exec -it jenkins bash
+18.ls -ahl /var/run/docker.sock
+19 if bothe step 16 and 18 show result below.
+srw-rw---- 1 root docker 0 Feb  5 16:47 /var/run/docker.sock
+
+if step 19 shows docker group then both jenkins container and host docker engine has access to API through unix sock.
+
+
+
+   
+
