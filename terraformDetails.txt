@@ -7,6 +7,23 @@
 7. rm terraform_0.11.3_linux_amd64.zip in putty.
 8. Go to parent directory and fire this cmd:  terraform --version
 
+9. inside terraform directory: vim ec2_instance.tf
+10 copy the below code of HCL format:
+   provider "aws" {
+        region = "us-east-2"
+ }
+
+   resource "aws_instance" "manee2k6" {
+        ami = "ami-965e6bf3"
+        instance_type = "t2.micro"
+        key_name = "terraform"
+        security_groups= ["JenkinsSG"]
+        tags {
+         Name = "terraform-instance"
+        }
+ }
+
+
 
 
 Reference links:
