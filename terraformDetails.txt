@@ -23,7 +23,11 @@
         }
  }
 
-
+11. fire the following command where the file above ec2_instance.tf exists:
+     terraform init
+     terraform plan
+     terraform apply
+     terraform destroy
 
 
 Reference links:
