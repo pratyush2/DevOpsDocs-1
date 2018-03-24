@@ -1,0 +1,22 @@
+Windows:
+
+To download Sonar scanner :
+http://sonarsource.bintray.com/Distribution/sonar-scanner-cli/
+
+To download SonarQube:
+https://www.sonarqube.org/downloads/
+
+https://docs.sonarqube.org/display/SONAR/SonarQube+Project+Examples
+
+To set the sonar analysis properties in sonar scanner properties file in conf folder of scanner.
+
+URL:https://docs.sonarqube.org/display/SONAR/Analysis+Parameters
+
+Ubuntu:
+https://www.vultr.com/docs/how-to-install-sonarqube-on-ubuntu-16-04
+https://www.howtoforge.com/tutorial/how-to-install-sonarqube-on-ubuntu-1604/
+
+Username for sonar instance: admin
+Pwd: admin
+
+Toker for Sonarqube to configure in Jenkins: sonarToken :49690b63450d96472746156c768f610598522d0e
