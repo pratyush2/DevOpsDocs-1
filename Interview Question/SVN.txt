@@ -1,0 +1,183 @@
+Q. What Exactly Is SVN?
+Open source version control system (VCS) which is in the short referred to as SVN, specifically designed for tracing all the modifications that have taken place to the source code of your design or files. SVN is a source which is utilised to direct all the files and folders and all the recent modifications which have happened in these files. SVN helps us to keep a complete track of the changes done by any person or by yourself onto the files.
+ 
+Q. What is trunk, branch, and tag in Subversion
+The trunk can be interpreted as the mainstream of development in relation to the SVN repository.
+ 
+Whereas a branch can be viewed as a parallel line of development which facilitates to attain flexible and disrupting work by not annoying the other users. The functioning of the trunk can view as the parallel workforce of multiple versions of the same product. 
+ 
+And the function of a tag can be viewed as a simple marker for highlighting the main revisions within the history of the repository. 
+ 
+Q. State the process involved to revert to a previous version.
+For the purpose of retrieving the previously existing version, the main command on which you are needed to focus is the “revert” command. The action performed by the revert command is that it simply erase all the local edits. But the main command which is needed to be used for this operation is the “merge” command. 
+ 
+This can be explained with a simple example.  For instance, the present version of your file [xyz.txt] is version 201 and the version which you currently require is 301. In such an instance the command code should be executed in this manner
+ 
+svn merge –r 201:301 xyz.txt
+svn commit –m “Reverted to revision 301” xyz.txt
+ 
+Q. What can you say regarding the G & R result codes in SVN? 
+The SVN result codes are:
+
+G Code:  G Code indicates all the changes which are that are consolidated into working copy of the report automatically. 
+
+R Code: R Code specifies that particular context or item which is replaced in the present working directory copy. It indicates that a particular file has underwent some changes are is arranged for deleting and some other new file is scheduled to get added in its area.
+
+ 
+Q. Differentiate the concepts of commit and update.
+In SVN repository the word update relates to the process of updating the local workspace in relation to all the changes which are done within the repository by the members of the team.
+ 
+While the word commit relates to the simple process of making changes within the local to repository. In much easier terminology it can stated as uploading a file into the repository.
+ 
+Q. Tell about importing the existing directory into the latest repository.
+For the purpose of importing your existing directory into the latest repository you have to work on implementing the following command.
+svn import/home/xsurface/programming file:///home/xsurface/repo/programing_repo-m “initial import”
+This command execution will simply lead to achieving your goal of importing your existing directory into the latest repository.
+ 
+Q. Describe the work functioning of SVN checkout command?
+Checkout command of SVN will simply update a local duplicate that able to work for the existing project of yours which is redeem among the local git repository. 
+ 
+This can be explained by a simple example stated below.
+You are given project that is allocated in the git-repository which is created at the URL location.
+
+For example, http://xyz.com/svn/xrepo/xproject. Now your aim is to check xproject among the local system. This can simply be done by making use of the code
+
+svn co http://www.xyz.com/svn/xrepo/xproject .
+
+All the files will be copied by using this command into the present existing directory. And in the same way if you wish to checkout your directory into a private git-repository one can use the git-command
+svn co http://www.xyz.com/svn/privaterepo/xproject –username admin –password admin
+ 
+Q. Differentiate between the GIT & SVN repository.
+The major differentiating aspects of GIT & SVN concepts are
+ 
+The command “commit” is not supported by GIT across multiple branches or tags & whereas SVN facilitates the creation of new folders t any location of your repository. 
+ 
+GIT is considered to be unvarying where as SVN supports the function of multiple revisions.
+ 
+In the case where your presented with larger files and frequently varying binary files, the GIT is less preferred & where as SVN is best preferred for handling a number of projects which are stored in the same repository.
+ 
+Q. State the procedure of creating a Patch is SVN.
+For the purpose of applying a patch in SVN the first thing you are required to do is to “Create Patch” by stimulating changes and creating the .dff file. Then, this existing .diff file can be implemented to the latest code base by using “Apply Patch”
+ 
+Q. Define the use of Revert in SVN.
+The word Revert simply suggests Reverting the local changes.
+Revert function is categorized into two major types
+Local Revert: This function will be deleting all the recent changes that have taken place in the files after the commencement of updates and before the commit function.
+Repo Revert: This will simply upload all the changes to the previous repo
+ 
+Q. Explain about the concept of synchronizing with the repository & tell us about the disparity between Synchronizing and Update.
+The term synchronizing with the repository simply relates to the procedure of updating your local workspace with all the changes which have been committed by the other members of your team.
+This is totally different from the concept of Update as Merge is a function that can be performed manually for the merge conflicts by simply using this.
+ 
+Q. Tell us about all the elements that should be stored in the SVN repository.
+SVN repository can be used for storing all the existing changes and files which are present in the branches of the existing system. 
+Here below is the list of all the things which are stored in the SVN repository. 
+ 
+MySQL Queries
+Project regarding important files
+Product Documents
+Database Updates
+Minutes of Meting and Imp Email
+Source Code
+ 
+Q. Write the command used for deleting a selected file from the SVN Repo.
+Deleting a file from the SVN Repo can be successfully be done by simply making use of the command “svn delete” followed by the file name which you want to get deleted or removed from your SVN Repo. The command code for this purpose is given below
+          svn delete filename
+ 
+Q. In simpler words differentiate between SVN Commit & SVN Update functions.
+The technical differentiation between the two main functions of SVN Commit & SVN Update can be stated as 
+SVN Commit- Push or Upload all the local changes to the repository.
+SVN Update- Get (download) the Repository changes files to local system.
+ 
+Q. Describe About Different Best Practices For SVN.
+Some of the best practical approaches which are the best fit for SVN if effectively followed include
+* The very first thing to be taken care of while working with the SVN is that make use of your own local space in order to perform any function in the SVN.
+* Secondly while working on SVN platform it is highly advisable to commit to all the autonomous changes no matter how small the changes may be. 
+* Making use of the comment option will be of a great help for the team to know what are the changes are done and why by just going through the comment section. 
+* The best approach in SVN is to validate all the set of files you are committing, you actually changed
+And it is always advisable to keep a copy of the update whenever you proceed to commit to the report.
+ 
+Q. Discuss about the command to be used to view both the local version & repository version in SVN and state their difference. 
+Both the local version and the repository version of the SVN system varies on the extent of modifications are performed to the system. 
+The commands which are sued for depicting the the difference between the two versions of SVN are given below.
+svn diff filename
+svn diff dirname
+
+Q. What is the function of Revert in subversion? Mention.
+“Revert” function will remove your local changes and reload the latest version from the repository.
+ 
+Q. Explain the main function of Revert in SVN in simple terminology.
+Revert is one among the most effective functions of SVN. Without the presence of Revert it will be hard to extract the local changes from the present existing system. The main functioning aspect of Revert is to takedown all the local changes which are done to the system and to reload the latest update from the repository.
+ 
+Q.  List out all the command prompts used in the SVN
+SVN has a quite long list of commands prompt out of which few are considered to be most effective and are regularly used in performing different operations in this system. Some of the most commonly used common prompts in SVN are
+ 
+Revert
+Import
+Checkout
+Commit
+Update
+Copy
+Beside these command prompts SVN has also the presence of other set of commands which are handy for different set of operations.
+ 
+Q. Explain how a new directory can be created in SVN under the version control?
+SVN has the presence of different set of commands which are called fro different approaches to deliver different set of actions. In such a case where you need to create a new directory under the version control can be successfully done by making use of the command stated below
+ 
+svn mkdir directory
+svn mkdir http://url/directory
+ 
+Q. Explain the process of importing the current directory into a new repository.
+One of the best feature of SVN functioning is that it facilitates the process of importing the current directory into a new repository by making use of a simple command prompt.
+ 
+The command you need to use to perform this action is
+svn import/home/xsurface/programming file:///home/xsurface/repo/programing_repo-m “initial import”
+By executing this command prompt you can import your current directory into new repository. 
+ 
+Q. How to check what’s inside the repository?
+SVN command prompts help in checking what exactly is inside the present repository. The command prompt which you need to work on for this approach is 
+ 
+svn list file:///home/xsurface/repo/programming_repo. Upon execution of this command prompt you will get a chance to know what exactly lies in the current repository..
+ 
+Q. List out the commands which you need to use subset of code & its history from one SNV report to another.
+In order to use subset of code and its history from one SNV report to another the command prompt which you need to use is 
+ 
+* svnadmin dump
+* svndumpfilter include
+* svnadmin load
+* svn remove
+ 
+Q. Which command should be used to add a file or Dir?
+In order to add a file or a dir into the SNV the command prompt which we have to use is
+ 
+* Svn add filename
+* Svn add dirname
+ 
+Q. How to import your existing directory into new directory?
+The command prompt which you need to use for importing your existing directory into a new repository is 
+Svn import/home/x surface/programming 
+file:///home/xsurface/repo/programing_repo-m “initial import”.
+ 
+Q. Which command will you use to get SVN log for a file?
+In order to attain a SVN log for a file the command which we will be working on is
+svn log testFile.php
+ 
+Q. How to check for modifications? 
+SVN modifications can be checked by using the command prompt which is 
+   Svn status –v path
+ 
+Q. How to get SVN Info
+The command prompt which you need to work on in order to get the SVN info is
+svn info
+ 
+Q. How to delete file from SVN Repo?
+To delete a file form SVN Repo the command prompt we need to use
+svn delete filename
+ 
+Q. How to get Updates from SVN Repo
+To get updates from the SVN Repo the command prompt we need to use
+svn update
+ 
+Q. How to add SVN folder?
+To add SVN folder name the command prompt we need to use is 
+svn add foldername
+
